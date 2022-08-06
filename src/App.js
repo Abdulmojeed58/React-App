@@ -1,15 +1,20 @@
-import { useState } from "react";
+// import { useEffect, useState } from "react";
+import React, {Component} from 'react';
 
 
-function App() {
-  const [joke, setJoke] = useState('')
+// function App() {
+ 
+//   return ( 
+// <div> 
+//   <h1>Hello World</h1>
+// </div>
+//   );
+// }
 
-  const fetchJoke = async () => {
-const resp = await fetch('https://api.kanye.rest').catch(err, () => console.log(err))
+class App extends Component {
+  render() {
+    return <h1>{this.props.greetings}</h1>
   }
-  return ( 
-<h1>Hi, Welcome to react</h1>
-  );
 }
 
 export default App;
